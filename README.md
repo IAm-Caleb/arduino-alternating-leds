@@ -6,17 +6,33 @@ This is my first Arduino project.
 
 The project uses an Arduino Uno to control two LEDs. The red LED blinks three times, followed by the yellow LED blinking three times. The sequence repeats continuously.
 
-Before building the physical circuit, I designed and tested it using Tinkercad. This allowed me to confirm the circuit connections, resistor placement, Arduino pin assignments, and program behaviour.
+Before building the physical circuit, I designed and tested it using Tinkercad. This helped me confirm the circuit connections, resistor placement, Arduino pin assignments, and program behaviour.
 
-## Project demonstration
+## Physical circuit
 
-### Tinkercad circuit overview
+### Circuit overview
 
-![Digital circuit overview](simulation/digital-circuit-overview.png)
+The image below shows the completed physical circuit built with an Arduino Uno and a breadboard.
+
+![Physical circuit overview](images/circuit-overview.jpg)
+
+### LEDs blinking
+
+The image below shows the LEDs during the blinking sequence.
+
+![LEDs blinking](images/leds-blinking.jpg)
+
+## Tinkercad simulation
+
+I first designed and tested the circuit in Tinkercad before assembling the physical version.
+
+### Digital circuit overview
+
+![Tinkercad digital circuit overview](simulation/digital-circuit-overview.png)
 
 ## Simulation and circuit files
 
-The files exported from the Tinkercad simulation are available below:
+The following files were exported from the Tinkercad simulation:
 
 * [Component list](simulation/components_list.csv)
 * [Circuit schematic](simulation/schematic.pdf)
@@ -44,7 +60,7 @@ The complete component list exported from Tinkercad is available in [`components
 | LED ground connections | Arduino GND                       |
 | Resistors              | Connected in series with the LEDs |
 
-The resistors limit the current flowing through the LEDs. This helps protect both the LEDs and the Arduino output pins from excessive current.
+The resistors limit the amount of current flowing through the LEDs. This helps protect both the LEDs and the Arduino output pins from excessive current.
 
 ## How the program works
 
@@ -69,20 +85,14 @@ The program uses two `for` loops:
 
 1. The first loop makes the red LED blink three times.
 2. The second loop makes the yellow LED blink three times.
-3. When both loops finish, the Arduino starts the sequence again.
+3. After both loops finish, the complete sequence starts again.
 
-The `digitalWrite()` function sends either a `HIGH` or `LOW` signal to an Arduino pin.
+The `digitalWrite()` function controls the electrical signal sent from each Arduino pin.
 
-* `HIGH` turns the LED on.
-* `LOW` turns the LED off.
+* `HIGH` turns the connected LED on.
+* `LOW` turns the connected LED off.
 
-The `delay()` function controls how long each LED remains on or off. In this project, each delay is 250 milliseconds.
-
-## Source code
-
-The complete Arduino program is available in:
-
-[`arduino-alternating-leds.ino`](arduino-alternating-leds.ino)
+The `delay()` function controls how long each LED remains on or off. In this project, each delay lasts 250 milliseconds.
 
 ## Program sequence
 
@@ -98,11 +108,18 @@ Repeat three times
 Restart the complete sequence
 ```
 
+## Source code
+
+The complete Arduino program is available in:
+
+[`arduino-alternating-leds.ino`](arduino-alternating-leds.ino)
+
 ## What I learned
 
 Through this project, I learned:
 
 * how to design and test a circuit using Tinkercad;
+* how to assemble an Arduino circuit physically;
 * how to connect LEDs to an Arduino Uno;
 * why LEDs require current-limiting resistors;
 * how to configure Arduino digital pins as outputs;
@@ -118,12 +135,12 @@ Through this project, I learned:
 Future versions of this project could:
 
 * allow the blinking speed to be changed;
-* use a push button to start or stop the LEDs;
+* use a push button to start or stop the sequence;
 * add more LEDs and blinking patterns;
 * use functions to reduce repeated code;
 * use `millis()` instead of `delay()`;
-* allow the LEDs to blink independently;
-* add a potentiometer to control the blinking speed.
+* allow both LEDs to blink independently;
+* use a potentiometer to control the blinking speed.
 
 ## Repository structure
 
@@ -131,6 +148,9 @@ Future versions of this project could:
 arduino-alternating-leds/
 ├── README.md
 ├── arduino-alternating-leds.ino
+├── images/
+│   ├── circuit-overview.jpg
+│   └── leds-blinking.jpg
 └── simulation/
     ├── components_list.csv
     ├── schematic.pdf
