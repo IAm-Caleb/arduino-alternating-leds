@@ -12,11 +12,13 @@ Before building the physical circuit, I designed and tested it using Tinkercad. 
 
 ### Physical Circuit
 
-![Physical Arduino circuit overview](images/circuit-overview.jpg)
+![Physical Arduino circuit overview](./images/circuit-overview.jpg)
+
+
 
 ### LEDs Blinking
+![Red and yellow LEDs blinking](./images/led-blinking.jpg)
 
-![Red and yellow LEDs blinking](images/led-blinking.jpg)
 
 ### Tinkercad Circuit Simulation
 
