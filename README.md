@@ -17,7 +17,7 @@ Before building the physical circuit, I designed and tested it using Tinkercad. 
 
 
 ### LEDs Blinking
-![Red and yellow LEDs blinking](./images/led-blinking.jpg)
+![Red LED blinking](./images/led-blinking.jpg)
 
 
 ### Tinkercad Circuit Simulation
