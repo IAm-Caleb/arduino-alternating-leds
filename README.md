@@ -24,6 +24,12 @@ Before building the physical circuit, I designed and tested it using Tinkercad. 
 
 ![Digital circuit overview](simulation/digital-circuit-overview.png)
 
+## Demo Video
+
+This video shows the completed alternating LED circuit in operation.
+
+https://github.com/user-attachments/assets/a636164a-38a9-44c2-89ec-983e3f603159
+
 ## Simulation and Circuit Files
 
 The following files were exported from the Tinkercad simulation:
