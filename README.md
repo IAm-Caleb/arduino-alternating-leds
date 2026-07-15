@@ -1,45 +1,45 @@
 # Arduino Alternating LED Blinker
 
-## Project overview
+## Project Overview
 
 This is my first Arduino project.
 
-The project uses an Arduino Uno to control two LEDs. The red LED blinks three times, followed by the yellow LED blinking three times. The sequence repeats continuously.
+The project uses an Arduino Uno to control two LEDs. The red LED blinks three times, followed by the yellow LED blinking three times. The sequence then repeats continuously.
 
 Before building the physical circuit, I designed and tested it using Tinkercad. This helped me confirm the circuit connections, resistor placement, Arduino pin assignments, and program behaviour.
 
-## Physical circuit
+## Physical Project
 
-### Circuit overview
+### Circuit Overview
 
-The image below shows the completed physical circuit built with an Arduino Uno and a breadboard.
+The image below shows the physical circuit assembled using an Arduino Uno and a breadboard.
 
 ![Physical circuit overview](images/circuit-overview.jpg)
 
-### LEDs blinking
+### LEDs Blinking
 
-The image below shows the LEDs during the blinking sequence.
+The image below shows the completed LED blinking project.
 
 ![LEDs blinking](images/leds-blinking.jpg)
 
-## Tinkercad simulation
+## Tinkercad Simulation
 
-I first designed and tested the circuit in Tinkercad before assembling the physical version.
+Before assembling the physical circuit, I created and tested a simulation in Tinkercad.
 
-### Digital circuit overview
+### Digital Circuit Overview
 
-![Tinkercad digital circuit overview](simulation/digital-circuit-overview.png)
+![Digital circuit overview](simulation/digital-circuit-overview.png)
 
-## Simulation and circuit files
+## Simulation Files
 
-The following files were exported from the Tinkercad simulation:
+The files exported from the Tinkercad simulation are available below:
 
 * [Component list](simulation/components_list.csv)
 * [Circuit schematic](simulation/schematic.pdf)
 * [Digital circuit overview](simulation/digital-circuit-overview.png)
 * [Electrical circuit board file](simulation/electrical-circuit-file.brd)
 
-## Components used
+## Components Used
 
 * Arduino Uno
 * Breadboard
@@ -51,18 +51,18 @@ The following files were exported from the Tinkercad simulation:
 
 The complete component list exported from Tinkercad is available in [`components_list.csv`](simulation/components_list.csv).
 
-## Circuit connections
+## Circuit Connections
 
-| Component              | Arduino connection                |
+| Component              | Connection                        |
 | ---------------------- | --------------------------------- |
-| Red LED                | Digital pin 9                     |
-| Yellow LED             | Digital pin 10                    |
+| Red LED                | Arduino digital pin 9             |
+| Yellow LED             | Arduino digital pin 10            |
 | LED ground connections | Arduino GND                       |
 | Resistors              | Connected in series with the LEDs |
 
-The resistors limit the amount of current flowing through the LEDs. This helps protect both the LEDs and the Arduino output pins from excessive current.
+The resistors limit the current flowing through the LEDs. This helps protect both the LEDs and the Arduino output pins from excessive current.
 
-## How the program works
+## How the Program Works
 
 The Arduino program contains two main functions: `setup()` and `loop()`.
 
@@ -85,41 +85,41 @@ The program uses two `for` loops:
 
 1. The first loop makes the red LED blink three times.
 2. The second loop makes the yellow LED blink three times.
-3. After both loops finish, the complete sequence starts again.
+3. After both loops finish, the complete sequence begins again.
 
-The `digitalWrite()` function controls the electrical signal sent from each Arduino pin.
+The `digitalWrite()` function controls the state of each Arduino output pin:
 
 * `HIGH` turns the connected LED on.
 * `LOW` turns the connected LED off.
 
-The `delay()` function controls how long each LED remains on or off. In this project, each delay lasts 250 milliseconds.
+The `delay()` function controls how long each LED remains on or off. In this project, each delay is 250 milliseconds.
 
-## Program sequence
+## Program Sequence
 
 ```text
-Red LED ON
-Red LED OFF
+Red LED turns on
+Red LED turns off
 Repeat three times
 
-Yellow LED ON
-Yellow LED OFF
+Yellow LED turns on
+Yellow LED turns off
 Repeat three times
 
 Restart the complete sequence
 ```
 
-## Source code
+## Source Code
 
-The complete Arduino program is available in:
+The complete Arduino program is available here:
 
 [`arduino-alternating-leds.ino`](arduino-alternating-leds.ino)
 
-## What I learned
+## What I Learned
 
 Through this project, I learned:
 
 * how to design and test a circuit using Tinkercad;
-* how to assemble an Arduino circuit physically;
+* how to assemble a basic Arduino circuit on a breadboard;
 * how to connect LEDs to an Arduino Uno;
 * why LEDs require current-limiting resistors;
 * how to configure Arduino digital pins as outputs;
@@ -127,22 +127,22 @@ Through this project, I learned:
 * how to use `delay()` to control timing;
 * how to use `for` loops to repeat instructions;
 * how the Arduino `setup()` and `loop()` functions work;
-* how to export circuit files from Tinkercad;
+* how to export simulation files from Tinkercad;
 * how to document an Arduino project on GitHub.
 
-## Possible future improvements
+## Possible Future Improvements
 
 Future versions of this project could:
 
 * allow the blinking speed to be changed;
-* use a push button to start or stop the sequence;
+* use a push button to start or stop the LEDs;
 * add more LEDs and blinking patterns;
 * use functions to reduce repeated code;
 * use `millis()` instead of `delay()`;
-* allow both LEDs to blink independently;
+* allow the LEDs to blink independently;
 * use a potentiometer to control the blinking speed.
 
-## Repository structure
+## Repository Structure
 
 ```text
 arduino-alternating-leds/
